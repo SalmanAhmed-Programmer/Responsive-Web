@@ -1,0 +1,383 @@
+/* =========================================================
+   Project: Responsive Business Website (HTML + CSS)
+   Topics:
+   - Flexbox (header/nav/footer/CTA)
+   - Grid (hero/cards/services/forms)
+   - Responsive design (mobile-first + breakpoints)
+
+   NOTE FOR STUDENTS:
+   Read the comments and try changing values to see results.
+   ========================================================= */
+
+/* ===== BASIC RESET ===== */
+* { box-sizing: border-box; }
+
+/* Use rem units for consistent scaling */
+html { font-size: 16px; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #111827;
+  background :#0d0d0f;
+}
+
+/* Center content and control max width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Links */
+a { color: inherit; }
+.link { color: #2563eb; font-weight: 700; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+
+/* ===== HEADER (Flexbox) ===== */
+.site-header {
+  background: #ff3b0a;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Flexbox row: brand on left, nav on right */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+.brand-dot { color: #2563eb; }
+
+/* Nav links (flex row) */
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.nav-link:hover { background: #0554f4; }
+.nav-link.active { background: #0de81f; }
+
+/* ===== HERO (Grid) ===== */
+.hero { background: #ffffff; }
+
+/* Mobile-first grid: 1 column */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 20px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0 10px;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+/* ===== TRUST (Flexbox) ===== */
+.trust {
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.trust-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trust-title { font-weight: 900; margin: 10px 0; }
+
+.trust-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.badge {
+  background: #111827;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* ===== SECTIONS + HELPERS ===== */
+.section { padding: 26px 0; }
+.section.alt { background: #ffffff; }
+.section1{
+  background-image: url(/Assets/Modern\ City\ Scape.webp);
+  border-image-width: 1600px;
+}
+
+.section-head h2 { margin: 0; 
+color: #fc0000;
+}
+
+.muted { color: #0855ee; }
+.small { font-size: 0.9rem; }
+
+/* Grid helper: 2 columns on tablet+ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* Grid helper: 3 columns on desktop */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* Card component */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* Testimonials */
+.testimonial p { margin-top: 0; }
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+/* CTA */
+.cta {
+  background: #111827;
+  color: #ffffff;
+  padding: 24px 0;
+}
+
+.cta-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 900;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn:hover { filter: brightness(0.95); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+/* Lists */
+.checks { padding-left: 18px; margin: 10px 0 0; }
+
+/* Page head section */
+.page-head {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 0;
+}
+
+/* ===== SERVICES (Grid + Flex inside cards) ===== */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.service-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+
+.steps { margin: 0; padding-left: 18px; }
+
+/* ===== ABOUT (Grid) ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: center;
+  color: #d1d5db;
+}
+
+.about-media img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+/* ===== CONTACT (Grid) ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.contact-list { padding-left: 18px; margin: 10px 0 0; }
+
+.form { margin-top: 10px; }
+
+/* Two-column form grid on tablet+ */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font: inherit;
+  outline: none;
+  background: #ffffff;
+}
+
+input:focus, textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.18);
+}
+
+/* ===== FOOTER (Flexbox) ===== */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS (Mobile-first)
+   ========================================================= */
+
+/* Tablet: 768px and above */
+@media (min-width: 768px) {
+  /* Hero becomes 2 columns */
+  .hero-grid { grid-template-columns: 1.1fr 0.9fr; }
+
+  /* 2 columns */
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+
+  /* Services becomes 2 columns */
+  .service-grid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+
+  /* About becomes 2 columns */
+  .about-grid { grid-template-columns: 1.1fr 0.9fr; }
+
+  /* Contact becomes 2 columns */
+  .contact-grid { grid-template-columns: 0.9fr 1.1fr; }
+
+  /* Form: 2 columns for name/email */
+  .form-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Desktop: 1024px and above */
+@media (min-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .service-grid { grid-template-columns: repeat(3, minmax(240px, 1fr)); }
+}
+.service-card1{
+  background: #0d0d0f;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}

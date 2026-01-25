@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+  Project: Responsive Business Website (HTML + CSS)
+  Goal:
+  - Convert a portfolio idea into a responsive business site
+  - Use Flexbox + Grid for layout
+  - Practice responsive breakpoints
+
+  STUDENT TIP:
+  - Open this file in browser
+  - Open style.css in VS Code
+  - Change values and refresh the browser
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes the website responsive on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyTravels| Responsive Business Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER (Flexbox) ===== -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="brand" href="index.html" aria-label="NovaTech Home">
+       EasyTravels <span class="brand-dot">.</span>
+      </a>
+
+      <!-- Nav is a flex row; wraps on smaller screens -->
+      <nav class="nav" aria-label="Main Navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO (Grid) ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>I have to provide a good service</h1>
+          <p>
+            EasyTravels provides a budget full service 
+            <strong>Flexbox</strong>Reliable<strong>Safe</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="services.html">View Services</a>
+            <a class="btn btn-outline" href="contact.html">Get a Quote</a>
+          </div>
+
+          <ul class="checks">
+            <li>Easy to booking</li>
+            <li>All time good response</li>
+            <li>Booking available any Time</li>
+            
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <img src="/Assets/Creative Travel & Tour Manipulation Poster Design.webp" alt="Travles banner" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR (Flexbox) ===== -->
+    <section class="trust">
+      <div class="container trust-flex">
+        <p class="trust-title">Trusted by Customer</p>
+        <div class="trust-badges">
+          <span class="badge">Fast</span>
+          <span class="badge">Responsive</span>
+          <span class="badge">Trustfully</span>
+          <span class="badge">Best for Travel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES (Grid Cards) ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Where You GO !</h2>
+          <p class="muted">All Around The World </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>flexible</h3>
+            <p>Easy to booking for everyone .</p>
+          </article>
+
+          <article class="card">
+            <h3>Modern Sections</h3>
+            <p>Provides a good service.</p>
+          </article>
+
+          <article class="card">
+            <h3>Clean </h3>
+            <p>Trustfully Service .</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (Grid) ===== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Customer feedback</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="card testimonial">
+            <p>“Thank you for provide a good service .”</p>
+            <div class="who">
+              <span class="avatar">A</span>
+              <div>
+                <strong>Hamza</strong>
+                <div class="muted small">Customer</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card testimonial">
+            <p>“fully recomonded”</p>
+            <div class="who">
+              <span class="avatar">S</span>
+              <div>
+                <strong>Anas</strong>
+                <div class="muted small">Customer</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+      <div class="container cta-flex">
+        <div>
+          <h2>Ready to book a ride</h2>
+          <p class="muted">lets Go hurry up book a ride 50 percent discount</p>
+        </div>
+        <a class="btn" href="contact.html">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <p>© 2026 EasyTravels. Demo for Web Development Class.</p>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

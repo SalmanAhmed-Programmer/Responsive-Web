@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+  Contact Page
+  - Accessible form with labels and required validation
+  - Responsive layout using Grid
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | EasyTravels</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="brand" href="index.html">EasyTravels<span class="brand-dot">.</span></a>
+      <nav class="nav" aria-label="Main Navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Contact With EasyTravels.Pk</h1>
+        <p class="muted">Enjoy The Travels .</p>
+      </div>
+    </section>
+
+    <section class="section1">
+      <div class="container">
+        <div class="contact-grid">
+          <aside class="card">
+            <h1>Contact US</h1>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> EasyTravels.com</li>
+              <li><strong>Phone:</strong> +92 300 0000000</li>
+              <li><strong>City:</strong> Hyderabad, Pakistan</li>
+            </ul>
+
+            <p class="small muted">We're open 24 Hours Service .</p>
+            
+          </aside>
+
+          <section class="card">
+            <h2>Send a message</h2>
+
+            <form class="form" action="#" method="post">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input id="name" name="name" type="text" placeholder="Enter your name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="name@example.com" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Where you Go" />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+              </div>
+
+              <button class="btn" type="submit">Book</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <p>© 2026 EasyTravels. Demo for Web Development Class.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

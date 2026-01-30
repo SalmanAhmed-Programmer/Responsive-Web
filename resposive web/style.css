@@ -74,7 +74,7 @@ a { color: inherit; }
 }
 
 .nav-link:hover { background: #0554f4; }
-.nav-link.active { background: #0de81f; }
+.nav-link.active { background: #fafcfa; }
 
 /* ===== HERO (Grid) ===== */
 .hero { background: #ffffff; }
